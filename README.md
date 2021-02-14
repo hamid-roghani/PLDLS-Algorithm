@@ -3,7 +3,7 @@ PLDLS: A Novel Parallel Label Diffusion and Label Selection-based Community Dete
 
 This is the soure code for Spark implementation of PLDLS algorithm for fast community detection. Furthuremore at the end of the source code, we have written Parallel modularity computing code which can be used in any researches to calculate time consuming modularity relation in a short time.
 
-We have provided both source code and compiled file for PLDLS algorithm. After installing and configuring Spark, for testing PLDLS based on the source code which is written in Scala, intellij IDE can be used and plugins related to scala should be installed. To execute PLDLS in intellij, first contents of 'datasts.rar' should be extracted to 'Spark_CommunityDetection' folder which are already exist. The result of executin for each dataset is written to 'results' folder which is inside the 'Spark_CommunityDetection' folder.
+We have provided both source code and compiled file for PLDLS algorithm. After installing and configuring Spark, for testing PLDLS based on the source code which is written in Scala, intellij IDE can be used and plugins related to scala should be installed. To execute PLDLS in intellij, first contents of 'datasts.rar' should be extracted to 'Spark_CommunityDetection/dataset' folder which is already exists. The result of executin for each dataset is written to 'results' folder which is inside the 'Spark_CommunityDetection' folder.
 
 Then by seting 'dataset_name' and configuring number of iterations and several flags for execution, final results will be written to 'results' folder. The configurations are as follows:
 
