@@ -24,7 +24,7 @@ To execute PLDLS on a cluster of computers, after installing Spark on the cluste
 
 3) Number of iteration for improved label propagation step
 
-4) merge_flag      ==> set to 1 to perform merge step ans set to 0 to not to perform merge step
+4) merge_flag ==> set to 1 to perform merge step ans set to 0 to not to perform merge step
 
 5) modularity_flag ==> set to 1 to calculate step ans set to 0 to not to perform merge step
 
@@ -38,38 +38,4 @@ In some datasets it is not necessary to execute merge step which it can be contr
 To compute NMI for ground-truth datasets, 2 Python codes are provided. "NMI_for_Small Datasets" is used for computing NMI for "karate, Dolphins, Polbooks, Football" datasets. "NMI_for_Big Datasets" is used for computing NMI for "Amazon, DBLP, YouTube, Livejouranl" datasets. For computing NMI, "part-00000" file for a dataset, source code for computing NMI ("NMI_for_Small Datasets" and "NMI_for_Big Datasets"), and contents of 'groundtruth.rar' should be in one folder.
 
 
-Names of datasets are as follows and are available in "datasets" folder.
-
-# Datasets:
-
-karate
-
-Dolphins
-
-Polbooks
-
-Football
-
-email
-
-email_enron
-
-netscience
-
-power
-
-ca_grqc
-
-collaboration
-
-ca_hepth
-
-PGP
-
-condmat_2003
-
-condmat_2005
-
-DBLP
-
-Amazon
+Names of datasets are provided in "datasets.rar" folder.
