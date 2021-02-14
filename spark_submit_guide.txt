@@ -1,0 +1,2 @@
+./spark-submit --class SparkScala_CommunityDetection.ProposedMethod --master IP of master(for example: spark://192.168.10.1:7077) --deploy-mode client --supervise  --conf spark.driver.maxResultSize=2g --driver-memory 2g --conf spark.broadcast.compress=true --num-executors 1 --executor-memory 6g --executor-cores 4  'Path to the PLDLS.jar file' 'Path to the input file' number of iteration for fast label selection step number of iterations for improved label propagation merge_flag modularity_flag writeToDisk_flag 'Path to output folder'
+
