@@ -33,9 +33,8 @@ To execute PLDLS on a cluster of computers, after installing and configuring Spa
 7) Path to output folder to write the RDD which contains the label of nodes (in the output folder several files will be produced which among them the file with name "part-00000" is the result which contains labels of nodes that will be used to compute NMI).
 ```
 
-In some datasets it is not necessary to execute merge step which it can be controled by "merge_flag" before execution. The output of the algorithm is RDD of labels and are written to disk. The labels of nodes which are written "part-00000"  are sorted in ascending based on nodes number.
+In some datasets it is not necessary to execute merge step which it can be controled by "merge_flag" before execution. The labels of nodes which are written to "part-00000" are sorted in ascending based on nodes number.
 
-To compute NMI for ground-truth datasets, 2 Python codes are provided. "NMI_for_Small Datasets" is used for computing NMI for "karate, Dolphins, Polbooks, Football" datasets. "NMI_for_Big Datasets" is used for computing NMI for "Amazon, DBLP, YouTube, Livejouranl" datasets. For computing NMI, "part-00000" file for a dataset, source code for computing NMI ("NMI_for_Small Datasets" and "NMI_for_Big Datasets"), and contents of 'groundtruth.rar' should be in one folder.
-
+To compute NMI for ground-truth datasets, 2 Python codes are provided. "NMI_for_Small Datasets" is used for computing NMI for "karate, Dolphins, Polbooks, Football" datasets and "NMI_for_Big Datasets" is used for computing NMI for "Amazon, DBLP, YouTube, Livejouranl" datasets. For computing NMI, put files "part-00000"  of a dataset, source code for computing NMI ("NMI_for_Small Datasets" and "NMI_for_Big Datasets"), and contents of 'groundtruth.rar' in one folder.
 
 Names of datasets are provided in "datasets.rar" folder.
