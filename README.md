@@ -16,7 +16,7 @@ Then by seting 'dataset_name' and configuring number of iterations and several f
     val write_to_disk = 1   // write_to_disk = 0 ==> write results  || do not write results to disk
     
 
-To execute PLDLS on a cluster of computers, after installing Spark on the cluster, PLDLS.jar file can be used to execute it with spark-submit. Execution guidleins with spark-submit is prepared in "spark_submit_guide.txt" file. To execute PLDLS, 7 configurations should be applied which are as follows:
+To execute PLDLS on a cluster of computers, after installing Spark on the cluster, 'PLDLS.jar' file is used to execute it with spark-submit. Execution guidleins with spark-submit is prepared in "spark_submit_guide.txt" file and its configurations can be changed based on the cluster resources. To execute PLDLS, 7 configurations should be applied which are as follows:
 ```
 1) The path to the input file (path to datasets.)
 
@@ -33,8 +33,9 @@ To execute PLDLS on a cluster of computers, after installing Spark on the cluste
 7) Path to output folder to write the RDD which contains the label of nodes (in the output folder several files will be produced which among them file with name "part-00000" is the result which contains labels of nodes that will be used to compute NMI)
 ```
 
+In some datasets it is not necessary to execute merge step which it can be controled by "merge_flag" before execution. The output of the algorithm is RDD of labels and are written to disk. The labels of nodes which are written "part-00000"  are sorted in ascending based on nodes number.
 
-We have used neighboring list structure as the input file for algorithm. The execution of the LSMD is so simple. To execute the code, it is needed to put extracted folder of "datasets.rar" into one folder with the extracted source codes of "LSMD_CommunityDetection_Algorithm.rar". Then open "main_algorithm.m" to write dataset name in "dataset_name" variable to start execution. In some datasets it is not necessary to execute merge step which it can be controled by "merge_flag" before execution. The output of the algorithm is label array of nodes which is written in "results" folder in ascending based on nodes number.
+To compute NMI for ground-truth datasets, 2 Python codes are provided. "NMI_for_Small Datasets" is used for computing NMI for "karate, Dolphins, Polbooks, Football" datasets. "NMI_for_Big Datasets" is used for computing NMI for "Amazon, DBLP, YouTube, Livejouranl" datasets. For computing NMI, "part-00000" file for a dataset, source code for computing NMI ("NMI_for_Small Datasets" and "NMI_for_Big Datasets"), and contents of 'groundtruth.rar' should be in one folder.
 
 
 Names of datasets are as follows and are available in "datasets" folder.
